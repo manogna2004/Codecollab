@@ -1,0 +1,97 @@
+/* Full page container with gradient */
+.chat-container {
+  min-height: 100vh;
+  padding: 40px;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.chat-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Chat box area */
+.chat-box {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  height: 300px;
+  width: 100%;
+  max-width: 600px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+/* Each message */
+.chat-message {
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  color: white;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 12px;
+  font-size: 1rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Sender name bold */
+.chat-sender {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Input area */
+.chat-input-area {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Input box */
+.chat-input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px 0 0 12px;
+  outline: none;
+  font-size: 1rem;
+  background: #f1f2f6;
+}
+
+/* Send button */
+.chat-button {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 0 12px 12px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.chat-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.5);
+}
+
+/* Message animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

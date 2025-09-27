@@ -1,0 +1,103 @@
+.codeexec-container {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.codeexec-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+  background-size: 300%;
+}
+
+@keyframes shine {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+/* Language selector */
+.language-selector {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.language-selector select {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+/* Editor box */
+.editor-box {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
+
+/* Run button */
+.run-button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #42e695, #3bb2b8);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 1rem;
+}
+
+.run-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(59,178,184,0.5);
+}
+
+/* Output box */
+.output-box {
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.output-box h3 {
+  margin-bottom: 0.5rem;
+}
+
+.output-box pre {
+  background: #f0f0f0;
+  padding: 0.8rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  color: #000;
+  font-size: 1rem;
+}

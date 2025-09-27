@@ -1,0 +1,128 @@
+/* Main container: split layout */
+.editor-main-container {
+  display: flex;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Left side */
+.editor-left {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+  background-size: 300%;
+}
+
+@keyframes shine {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+.editor-box {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
+
+/* Run button */
+.run-button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #42e695, #3bb2b8);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 1rem;
+}
+
+.run-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(59,178,184,0.5);
+}
+
+/* Output box */
+.output-box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.output-box h3 {
+  margin-bottom: 0.5rem;
+}
+
+.output-box pre {
+  background: #f0f0f0;
+  padding: 0.8rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  color: #000;
+  font-size: 1rem;
+}
+
+/* Right side: Users List */
+.editor-right {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.editor-right h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

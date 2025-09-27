@@ -1,0 +1,108 @@
+.projects-container {
+  min-height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #fdfbfb, #a1c4fd);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: #333;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-description {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Grid */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Cards */
+.project-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Inputs */
+.project-card input {
+  width: 80%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.project-card input:focus {
+  border-color: #764ba2;
+  box-shadow: 0 0 10px rgba(118,75,162,0.3);
+}
+
+/* Buttons */
+.project-card button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s;
+}
+
+.project-card.create button {
+  background: linear-gradient(90deg, #42e695, #3bb2b8);
+}
+
+.project-card.create button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(59,178,184,0.5);
+}
+
+.project-card.join button {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+}
+
+.project-card.join button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(238,9,121,0.5);
+}
